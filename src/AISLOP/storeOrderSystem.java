@@ -1,10 +1,9 @@
 package AISLOP;
 
 public class storeOrderSystem {
-    private double discountRate = 0.10;
+    private final double DISCOUNTRATE = 0.10;
 
 
-    // method to check if the order can even be processed
     public void processingProduct(String name, int quantity, double price) {
         if(isProcessed(name, quantity, price)) {
             double discount = calculateDiscount(price);
@@ -32,7 +31,7 @@ public class storeOrderSystem {
         if( price <=100){
             return 0.00;
         }
-        return price * discountRate;
+        return price * DISCOUNTRATE;
     }
 }
 
